@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    container: {
+                        center: true,
+                        padding: '1rem',
+                    },
+                    fontFamily: {
+                        inter: 'Inter, sans-serif'
+                    },
+                    colors: {
+                        grey: "#4B5563",
+
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="main.css">
+    <title>EnelMed</title>
+</head>
+
+<body
+    class="container mx-auto font-inter tracking-wide leading-loose font-thin">
+    <nav class="fixed left-0 w-screen bg-white/90 z-50 shadow">
+        <div
+            class="container mx-auto flex justify-between items-center py-4 peer peer-checked:flex-col  peer-checked:justify-center">
+            <div>
+                <img src="assets/mark.svg" alt="logo" class="w-8 h-8">
+            </div>
+            <input type="checkbox" id="menu-toggle"
+                class="hidden peer absolute right-2">
+            <label for="menu-toggle"
+                class="menuBtn block cursor-pointer md:hidden w-8 h-8 peer-checked:flex-0 absolute right-2 ">
+                <img src="assets/menu-bar.png" alt='alt' class="p-0.5">
+            </label>
+            <div
+                class="hidden peer-checked:flex peer-checked:w-1/2 peer-checked:fixed lg:static peer-checked:inset-y-0 peer-checked:translate-y-16 peer-checked:bg-white/90 peer-checked:flex-col peer-checked:border-r-2 peer-checked:transition-opacity peer-checked:duration-300 md:flex lg:relative lg:translate-x-0 gap-8 right-0  peer-checked:p-10 text-grey peer-checked:items-end peer-checked:border-l-2 ">
+                <a href="#"
+                    class="menu  font-semibold text-xl md:text-sm hover:opacity-60 transition-opacity">Product</a>
+                <a href="#"
+                    class="menu  font-semibold text-xl md:text-sm hover:opacity-60 transition-opacity">Features</a>
+                <a href="#"
+                    class="menu  font-semibold text-xl md:text-sm hover:opacity-60 transition-opacity">Resources</a>
+                <a href="#"
+                    class="menu  font-semibold text-xl md:text-sm hover:opacity-60 transition-opacity">Company</a>
+            </div>
+            <a href="#"
+                class="menu hidden peer-checked:flex md:flex gap-2 justify-end items-center font-semibold text-sm peer-checked:flex-none peer-checked:mr-12">
+                Log in
+                <img src="assets/right-arrow.png" alt="zaloguj" class="w-3 h-3">
+            </a>
+        </div>
+    </nav>
+    <header class=" md:h-full flex justify-center items-center mt-0 z-0  ">
+        <div
+            class="container flex-col md:flex-row relative mx-auto w-full flex justify-center items-center md:my-10 gap-6 min-h-fit mt-20 md:mt-8 lg:mt-0 overflow-hidden ">
+            <div data-aos="fade-up"
+                class="w-full md:w-1/2 gap-4 flex flex-col shrink-0 ">
+                <h2 class="text-3xl  md:text-4xl lg:text-6xl font-bold">
+                    We'rechanging the way people connect.
+                </h2>
+                <p class="text-lg md:text-xl lg:text-2xl prose text-grey ">Lorem
+                    ipsum
+                    dolor, sit amet
+                    consectetur adipisicing elit. Praesentium hic rem nesciunt
+                    atque earum repellendus beatae ad dolore excepturi eum!
+                    Mollitia amet accusantium laudantium eius vitae eveniet
+                    incidunt officiis enim!</p>
+            </div>
+            <div data-aos="fade-up"
+                class="w-full md:w-1/2 flex relative my-10  justify-center items-center md:h-[600px] lg:h-[800px] xl:h-[900px] ">
+                <div
+                    class="flex block md:absolute md:-right-28 md:top-24 top-0 ">
+                    <div
+                        class="grid grid-cols-3 grid-rows-5 gap-3 md:gap-6 gallery-container">
+                        <div></div>
+                        <div class="col-start-1 row-start-2"></div>
+                        <div
+                            class="row-span-2 col-start-1 row-start-3 relative  ">
+                            <img src="assets/head2.avif" alt='alt'
+                                class="object-cover aspect-[2/3] overflow rounded-2xl w-52 shadow-xl">
+                        </div>
+                        <div class="col-start-1 row-start-5"></div>
+                        <div class="col-start-2 row-start-1"></div>
+                        <div
+                            class="row-span-2 col-start-2 row-start-2 rounded-2xl ">
+                            <img src="assets/head1.avif" alt='alt'
+                                class="object-cover object-center overflow rounded-2xl aspect-[2/3] w-52 shadow-xl">
+                        </div>
+                        <div
+                            class="row-span-2 col-start-2 row-start-4 rounded-2xl overflow">
+                            <img src="assets/head2.avif" alt='alt'
+                                class="object-cover aspect-[2/3] w-52 object-center overflow rounded-2xl shadow-xl">
+                        </div>
+                        <div
+                            class="row-span-2 col-start-3 row-start-1 rounded-2xl overflow">
+                            <img src="assets/head1.avif" alt='alt'
+                                class="object-cover aspect-[2/3] w-52 object-center overflow rounded-2xl shadow-xl">
+                        </div>
+                        <div
+                            class="row-span-2 col-start-3 row-start-3 rounded-2xl overflow">
+                            <img src="assets/head2.avif" alt='alt'
+                                class="object-cover aspect-[2/3] w-52 object-center overflow rounded-2xl shadow-xl">
+                        </div>
+                        <div class="col-start-3 row-start-5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="mt-10 md:mt-20 lg:mt-2">
+        <section class="container flex flex-col w-full gap-10">
+            <h2 data-aos="fade-up" class="text-xl md:text-2xl font-bold">Our
+                mision</h2>
+            <div
+                class="flex flex-col md:flex-row w-full justify-between items-center ">
+                <div
+                    class="flex md:w-1/2 text-grey flex-col gap-10 tracking-normal">
+                    <p data-aos="fade-up" class="text-base md:text-lg ">Lorem
+                        ipsum dolor sit amet,
+                        consectetur
+                        adipisicing elit.
+                        Expedita, reprehenderit quasi animi dolorem corrupti
+                        perferendis consequatur, eum labore, quia architecto
+                        corporis fuga in velit autem cupiditate aperiam nesciunt
+                        accusamus pariatur?</p>
+                    <p data-aos="fade-up"
+                        class="tracking-normal leading-normal">Lorem ipsum dolor
+                        sit amet consectetur
+                        adipisicing elit.
+                        Quia sint dolor eligendi? Sed repudiandae voluptatibus
+                        pariatur a iusto, tempora quibusdam laudantium cum.
+                        Officiis accusamus suscipit esse ab cumque?</p>
+                    <p data-aos="fade-up"
+                        class="tracking-normal leading-normal">Lorem ipsum
+                        dolor, sit amet
+                        consectetur adipisicing elit.
+                        Laborum aut cum quidem, tenetur nam facere ab?</p>
+                </div>
+                <div
+                    class="flex md:w-1/2 flex-col justify-center md:items-center  gap-8 mt-10 md:mt-0">
+                    <div data-aos="fade-up"
+                        class=" md:w-1/2 flex flex-col gap-4">
+                        <p class="text-3xl md:text-5xl font-semibold">44 million
+                        </p>
+                        <p>Transactions every 24 hours
+                        </p>
+                    </div>
+                    <div data-aos="fade-up"
+                        class="md:w-1/2 flex flex-col gap-4">
+                        <p class="text-3xl md:text-5xl font-semibold">$119
+                            trilion</p>
+                        <p>Assets under holding
+                        </p>
+                    </div>
+                    <div data-aos="fade-up"
+                        class="md:w-1/2 flex flex-col gap-4">
+                        <p class="text-3xl md:text-5xl font-semibold">46,000</p>
+                        <p>New users annually
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div data-aos="fade-up" class="flex h-[600px] mt-20">
+            <img src="assets/photo1.jpeg" alt="img"
+                class="rounded-2xl object-cover w-full object-center">
+        </div>
+        <section class="container mt-20 flex flex-col gap-12">
+            <h2 data-aos="fade-up" class="text-xl md:text-2xl font-bold">Our
+                values</h2>
+            <p data-aos="fade-up"
+                class="max-w-prose text-base md:text-lg text-grey">Lorem ipsum
+                dolor sit amet
+                consectetur
+                adipisicing elit. Alias
+                nemo suscipit quas beatae et blanditiis sed ut nostrum vel?
+                Quae!</p>
+            <div
+                class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-20 text-grey ">
+                <div data-aos="fade-up" class="">
+                    <p class="font-semibold">Be world-class</p>
+                    <p class="max-w-prose ">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Ex similique autem inventore voluptatibus, corrupti
+                        possimus reiciendis cumque a porro. Neque.</p>
+                </div>
+                <div data-aos="fade-up" class="">
+                    <p class="font-semibold">Be world-class</p>
+                    <p class="max-w-prose ">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Ex similique autem inventore voluptatibus, corrupti
+                        possimus reiciendis cumque a porro. Neque.</p>
+                </div>
+                <div data-aos="fade-up" class="">
+                    <p class="font-semibold">Be world-class</p>
+                    <p class="max-w-prose ">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Ex similique autem inventore voluptatibus, corrupti
+                        possimus reiciendis cumque a porro. Neque.</p>
+                </div>
+                <div data-aos="fade-up" class="">
+                    <p class="font-semibold">Be world-class</p>
+                    <p class="max-w-prose ">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Ex similique autem inventore voluptatibus, corrupti
+                        possimus reiciendis cumque a porro. Neque.</p>
+                </div>
+                <div data-aos="fade-up" class="">
+                    <p class="font-semibold">Be world-class</p>
+                    <p class="max-w-prose ">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Ex similique autem inventore voluptatibus, corrupti
+                        possimus reiciendis cumque a porro. Neque.</p>
+                </div>
+                <div data-aos="fade-up" class="">
+                    <p class="font-semibold">Be world-class</p>
+                    <p class="max-w-prose ">Lorem, ipsum dolor sit amet
+                        consectetur adipisicing elit.
+                        Ex similique autem inventore voluptatibus, corrupti
+                        possimus reiciendis cumque a porro. Neque.</p>
+                </div>
+            </div>
+        </section>
+        <section
+            class="container flex flex-col w-full mx-auto my-28 justify-center items-center gap-4">
+            <h3 data-aos="fade-up"
+                class="text-center text-lg font-semibold text-grey my-4">Trusted
+                by the world’s
+                most innovative teams
+            </h3>
+            <div
+                class="md:px-2 w-full flex gap-4 md:gap-10 mx-auto flex-wrap justify-around  items-center ">
+                <img data-aos="fade-up" data-aos-delay="100" src="assets/aa.svg"
+                    alt='alt' class='w-32 md:w-44'>
+                <img data-aos="fade-up" data-aos-delay="200" src="assets/re.svg"
+                    alt='alt' class='w-32 md:w-44'>
+                <img data-aos="fade-up" data-aos-delay="300"
+                    src="assets/stata.svg" alt='alt' class='w-32 md:w-44'>
+                <img data-aos="fade-up" data-aos-delay="400"
+                    src="assets/tran.svg" alt='alt' class='w-32 md:w-44'>
+                <img data-aos="fade-up" data-aos-delay="500" src="assets/tu.svg"
+                    alt='alt' class='w-32 md:w-44'>
+            </div>
+        </section>
+        <section class=" flex flex-col w-full mx-auto my-20 gap-10">
+            <h2 data-aos="fade-up" class="text-xl md:text-2xl font-bold">Our
+                team</h2>
+            <p data-aos="fade-up"
+                class="max-w-prose text-base md:text-xl text-grey">Lorem
+                ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Perspiciatis iure consequatur cumque accusamus. Eos, unde!</p>
+            <div class="w-full mx-auto mt-10">
+                <ul
+                    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 md:gap-10 px-0 justify-center items-start text-center ">
+                    <li data-aos="fade-up" data-aos-delay="100"
+                        class="flex flex-col items-center group ">
+                        <img src="assets/t1.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder /CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="200"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t2.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Dries Vincent</h3>
+                        <p class="text-xs md:text-sm text-grey">Business
+                            Relations
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="300"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t3.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Lindsay Walton</h3>
+                        <p class="text-xs md:text-sm text-grey ">Front-end
+                            Developer</p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="400"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t4.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Cortney Henry</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="500"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t5.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Tom Cook </h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="600"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t1.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="700"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t2.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="800"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t3.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="900"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t4.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="1000"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t5.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="1100"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t1.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="1200"
+                        class="flex flex-col items-center group">
+                        <img src="assets/t2.avif" alt='alt'
+                            class="w-20 md:w-24 w-20 md:h-24 rounded-full object-cover group-hover:scale-105 transition-transform ">
+                        <h3 class="mt-2 font-semibold">Michael Foster</h3>
+                        <p class="text-xs md:text-sm text-grey">Co-Founder/CTO
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section
+            class="container mx-auto flex flex-col w-full gap-10 my-20 justify-center items-center">
+            <h2 data-aos="fade-up" class="text-xl md:text-2xl font-bold w-full">
+                From the
+                blog
+            </h2>
+            <p data-aos="fade-up" class="text-lg md:text-xl text-grey w-full">
+                Vel dolorem
+                qui facilis
+                soluta sint aspernatur totam cumque.
+            </p>
+            <div
+                class="mt-2 h-full flex gap-2 md:gap-8 justify-center items-center w-full flex-wrap lg:flex-nowrap">
+                <article data-aos="fade-up" data-aos-delay="100"
+                    class="relative flex flex-col justify-end  min-w-[300px] lg:w-1/3 w-full h-[500px] rounded-2xl mt-10 overflow items-start cursor-pointer group">
+                    <img src="assets/blog1.avif" alt='alt'
+                        class="absolute aspect-[3/4] w-full h-full object-center object-cover rounded-2xl   ">
+                    <div
+                        class="absolute bg-black/20 w-full h-full object-center object-cover overflow rounded-2xl bg-gradient-to-b from-grey/10 to-black/70  transition-colors group-hover:bg-black/60 ease-in-out duration-500">
+                    </div>
+                    <div
+                        class="z-10 w-11/12 mx-auto px-2.5 m-4 gap-4 flex flex-col">
+                        <div
+                            class="z-10 flex gap-4 text-sm items-center text-white">
+                            <time datetime="2020-03-16">Mar 16, 2020</time>
+                            <div class="flex gap-2 justify-center items-center">
+                                <img src="assets/t1.avif" alt='alt'
+                                    class="w-6 h-6 rounded-full object-cover">
+                                Michael Foster
+                            </div>
+                        </div>
+                        <h3
+                            class="z-20 text-white leading-normal font-bold text-lg mb-4">
+                            <a href="">Vel expedita assumenda placeat aut nisi
+                                optio
+                                voluptates quas</a>
+                        </h3>
+                    </div>
+                </article>
+                <article data-aos="fade-up" data-aos-delay="200"
+                    class="relative flex flex-col justify-end   min-w-[300px]  lg:w-1/3 w-full h-[500px] rounded-2xl mt-10 overflow items-start cursor-pointer group">
+                    <img src="assets/blog3.avif" alt='alt'
+                        class="absolute aspect-[3/4] w-full h-full object-center object-cover rounded-2xl ">
+                    <div
+                        class="absolute bg-black/20 w-full h-full object-center object-cover overflow rounded-2xl bg-gradient-to-b from-grey/10 to-black/70 group-hover:bg-black/50 ease-in-out transition-colors duration-500">
+                    </div>
+                    <div
+                        class="z-10 w-11/12 mx-auto px-2.5 m-4 gap-4 flex flex-col">
+                        <div
+                            class="z-10 flex gap-4 text-sm items-center text-white">
+                            <time datetime="2020-03-16">Mar 16, 2020</time>
+                            <div class="flex gap-2 justify-center items-center">
+                                <img src="assets/t1.avif" alt='alt'
+                                    class="w-6 h-6 rounded-full object-cover">
+                                Michael Foster
+                            </div>
+                        </div>
+                        <h3
+                            class="z-20 text-white leading-normal font-bold text-lg mb-4">
+                            <a href="">Vel expedita assumenda placeat aut nisi
+                                optio
+                                voluptates quas</a>
+                        </h3>
+                    </div>
+                </article>
+                <article data-aos="fade-up" data-aos-delay="300"
+                    class="relative flex flex-col justify-end  min-w-[300px] lg:w-1/3 w-full h-[500px] rounded-2xl mt-10 overflow items-start cursor-pointer group">
+                    <img src="assets/blog2.avif" alt='alt'
+                        class="absolute aspect-[3/4] w-full h-full object-center object-cover rounded-2xl ">
+                    <div
+                        class="absolute bg-black/20 w-full h-full object-center object-cover overflow rounded-2xl bg-gradient-to-b from-grey/10 to-black/70 transition-colors group-hover:bg-black/50 ease-in-out duration-500">
+                    </div>
+                    <div
+                        class="z-10 w-11/12 mx-auto px-2.5 m-4 gap-4 flex flex-col">
+                        <div
+                            class="z-10 flex gap-4 text-sm items-center text-white">
+                            <time datetime="2020-03-16">Mar 16, 2020</time>
+                            <div class="flex gap-2 justify-center items-center">
+                                <img src="assets/t1.avif" alt='alt'
+                                    class="w-6 h-6 rounded-full object-cover">
+                                Michael Foster
+                            </div>
+                        </div>
+                        <h3
+                            class="z-20 text-white leading-normal  font-bold text-lg mb-4">
+                            <a href="">Vel expedita assumenda placeat aut nisi
+                                optio
+                                voluptates quas</a>
+                        </h3>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer data-aos="fade-up" class="my-10">
+        <div>
+            <ul
+                class="flex gap-8 justify-center items-center  flex-wrap text-xs md:text-base">
+                <li>
+                    <a href=""
+                        class="text-grey/70  hover:text-grey transition-colors">Blog</a>
+                </li>
+                <li>
+                    <a href=""
+                        class="text-grey/70  hover:text-grey transition-colors">Jobs</a>
+                </li>
+                <li>
+                    <a href=""
+                        class="text-grey/70  hover:text-grey transition-colors">Press</a>
+                </li>
+                <li>
+                    <a href=""
+                        class="text-grey/70  hover:text-grey transition-colors">Accessibility</a>
+                </li>
+                <li>
+                    <a href=""
+                        class="text-grey/70  hover:text-grey transition-colors">Partners</a>
+                </li>
+            </ul>
+        </div>
+        <div class="w-full flex justify-center items-center my-10 flex-wrap">
+            <ul class="flex gap-8 w-full justify-center items-center flex-wrap">
+                <li><a href=""><img
+                            class="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity"
+                            src="assets/facebook.png" alt='alt'></a></li>
+                <li><a href=""><img
+                            class="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity"
+                            src="assets/instagram.png" alt='alt'></a></li>
+                <li><a href=""><img
+                            class="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity"
+                            src="assets/twitter.png" alt='alt'></a></li>
+                <li><a href=""><img
+                            class="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity"
+                            src="assets/github.png" alt='alt'></a></li>
+                <li><a href=""><img
+                            class="w-5 h-5 opacity-50 hover:opacity-100 transition-opacity"
+                            src="assets/youtube.png" alt='alt'></a></li>
+            </ul>
+        </div>
+        <div
+            class="w-full flex justify-center items-center opacity-50 text-xs md:text-sm gap-1">
+            © <span class="footer-year"> </span> Your Company, Inc. All rights
+            reserved.</div>
+        <p class="text-xs text-grey/70 w-full text-right">Made by Paulina
+            Łastowiecka</p>
+    </footer>
+
+    <script src="main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

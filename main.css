@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	position: relative;
+}
+
+body::before,
+body::after {
+	content: "";
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	z-index: -1;
+	background: radial-gradient(
+		circle at center,
+		rgba(255, 20, 147, 0.2),
+		transparent
+	);
+	filter: blur(15px);
+}
+
+body::before {
+	top: 400px;
+	right: 2px;
+	bottom: 0;
+}
+
+body::after {
+	top: 900px;
+	right: 300px;
+	bottom: 0;
+}
